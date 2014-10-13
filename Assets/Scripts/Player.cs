@@ -5,10 +5,9 @@ using System.Linq;
 
 public class Player : MonoBehaviour
 {
-    const float FUPDATE_HZ = 50f;
-    public float speed;
+    const float speed = 12f;
 
-    const float GRAVITY_SCALE = 10f;
+    const float GRAVITY_SCALE = 80f;
     public Vector2 gravity {
         get {
             return Physics2D.gravity.normalized;
@@ -22,7 +21,7 @@ public class Player : MonoBehaviour
         Physics2D.gravity = -Vector2.up * GRAVITY_SCALE;
     }
     
-    void FixedUpdate() {
+    void Update() {
         UpdateGravity();
         Move();
     }
@@ -40,6 +39,6 @@ public class Player : MonoBehaviour
                                                  .Select(kvp => kvp.Value)
                                                  .Where(v => v.Abs() != gravity.Abs())
                                                  .Aggregate(default(Vector2), (v1, v2) => v1 + v2);
-        transform.position += heading * (speed / FUPDATE_HZ);
+        transform.position += heading * (Time.deltaTime * speed);
     }
 }
