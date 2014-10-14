@@ -66,6 +66,10 @@ public class Player : MonoBehaviour
                          .Any(normal => Vector2.Dot(normal, gravity) < -0.9);
     }
 
+    void OnBecameInvisible() {
+        Die();
+    }
+
     public void Die() {
         PlayerStart ps = (PlayerStart)GameObject.FindObjectOfType(typeof(PlayerStart));
         ps.GeneratePlayer();
