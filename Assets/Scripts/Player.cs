@@ -39,6 +39,6 @@ public class Player : MonoBehaviour
                                                  .Select(kvp => kvp.Value)
                                                  .Where(v => v.Abs() != gravity.Abs())
                                                  .Aggregate(default(Vector2), (v1, v2) => v1 + v2);
-        transform.position += heading * (Time.deltaTime * speed);
+        transform.Translate(heading * (Time.deltaTime * speed));
     }
 }
