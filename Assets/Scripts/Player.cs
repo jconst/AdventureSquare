@@ -39,6 +39,13 @@ public class Player : MonoBehaviour
                                                  .Select(kvp => kvp.Value)
                                                  .Where(v => v.Abs() != gravity.Abs())
                                                  .Aggregate(default(Vector2), (v1, v2) => v1 + v2);
-        transform.Translate(heading * (Time.deltaTime * speed));
+        Vector3 newPos = transform.position + heading * (Time.deltaTime * speed);
+        transform.position = newPos;
+    }
+
+    public void Die() {
+        PlayerStart ps = (PlayerStart)GameObject.FindObjectOfType(typeof(PlayerStart));
+        ps.GeneratePlayer();
+        Destroy(gameObject);
     }
 }
