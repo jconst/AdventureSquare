@@ -14,17 +14,17 @@ public static class Extensions
     //     }
     // }
 
-    // public static float ToAngle(this Vector2 v) {
-    //     float angle = Vector2.Angle(Vector2.up, v);
-    //     if (v.x < 0) {
-    //         angle = 360 - angle;
-    //     }
-    //     return angle;
-    // }
-    // public static Quaternion ToQuaternion(this Vector2 v) {
-    //     Vector3 euler = new Vector3(0, 0, -v.ToAngle());
-    //     return Quaternion.Euler(euler);
-    // }
+    public static float ToAngle(this Vector2 v) {
+        float angle = Vector2.Angle(Vector2.up, v);
+        if (v.x < 0) {
+            angle = 360 - angle;
+        }
+        return angle;
+    }
+    public static Quaternion ToQuaternion(this Vector2 v) {
+        Vector3 euler = new Vector3(0, 0, -v.ToAngle());
+        return Quaternion.Euler(euler);
+    }
 
     public static Vector2 Abs(this Vector2 v) {
         return new Vector2(Math.Abs(v.x), Math.Abs(v.y));
