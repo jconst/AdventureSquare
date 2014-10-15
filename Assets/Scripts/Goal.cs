@@ -8,11 +8,12 @@ public class Goal : MonoBehaviour
     void OnCollisionEnter2D(Collision2D coll) {
         Player player = coll.gameObject.GetComponent<Player>();
         if (player != null) {
-            WinLevel();
+            WinLevel(player);
         }
     }
 
-    void WinLevel() {
+    void WinLevel(Player player) {
+        Destroy(player.gameObject);
         int nextLevel = Application.loadedLevel + 1;
         if (nextLevel >= Application.levelCount) {
             nextLevel = 1;
