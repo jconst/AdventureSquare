@@ -5,12 +5,30 @@ using System.Linq;
 
 public class MainCamera : MonoBehaviour
 {
-    void Start() {
+    void Awake() {
         DontDestroyOnLoad(gameObject);
+    }
+
+    void Start() {
         AudioManager.Main.PlayNewSound("Background", loop: true);
+
+        OnLevelWasLoaded(Application.loadedLevel);
     }
     
-    void Update() {
-    
+    void OnLevelWasLoaded(int level) {
+        DestroyAllPlayers();
+        if (level == 0) {
+            Application.LoadLevel(1);
+        }
+    }
+
+    void OnApplicationQuit() {
+        DestroyAllPlayers();
+    }
+
+    void DestroyAllPlayers() {
+        GameObject.FindObjectsOfType(typeof(Player))
+                  .ToList()
+                  .ForEach(go => Destroy(go));
     }
 }

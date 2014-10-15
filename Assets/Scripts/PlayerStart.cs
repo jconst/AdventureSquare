@@ -6,6 +6,11 @@ using System.Linq;
 public class PlayerStart : MonoBehaviour
 {
     void Start() {
+        if (GameObject.FindObjectOfType(typeof(Camera)) == null) {
+            Debug.Log("No Camera");
+            Application.LoadLevel(0);
+            return;
+        }
         renderer.enabled = false;
         GeneratePlayer();
     }

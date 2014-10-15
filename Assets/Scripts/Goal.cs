@@ -13,7 +13,10 @@ public class Goal : MonoBehaviour
     }
 
     void WinLevel() {
-        Debug.Log("Win");
-        Application.LoadLevel(Application.loadedLevel + 1);
+        int nextLevel = Application.loadedLevel + 1;
+        if (nextLevel >= Application.levelCount) {
+            nextLevel = 1;
+        }
+        Application.LoadLevel(nextLevel);
     }
 }

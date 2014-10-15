@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     const float speed = 12f;
     const float GRAVITY_SCALE = 80f;
 
+    private bool dead = false;
     private HashSet<Collision2D> collisions =
         new HashSet<Collision2D> ();
     public Vector2 gravity {
@@ -57,7 +58,6 @@ public class Player : MonoBehaviour
         if (coll.rigidbody != null) {
             collisions.RemoveWhere(c => c.gameObject == coll.gameObject);
         }
-        Debug.Log(collisions.Count);
     }
 
     bool TouchingFloor() {
@@ -67,12 +67,14 @@ public class Player : MonoBehaviour
     }
 
     void OnBecameInvisible() {
-        Die();
+        if (!dead)
+            Die();
     }
 
     public void Die() {
+        dead = true;
+        Destroy(gameObject);
         PlayerStart ps = (PlayerStart)GameObject.FindObjectOfType(typeof(PlayerStart));
         ps.GeneratePlayer();
-        Destroy(gameObject);
     }
 }
