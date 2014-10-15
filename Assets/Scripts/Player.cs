@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     }
     
     void Update() {
+        CheckOnscreen();
         if (TouchingFloor()) {
             UpdateGravity();
             Move();
@@ -66,12 +67,13 @@ public class Player : MonoBehaviour
                          .Any(normal => Vector2.Dot(normal, gravity) < -0.9);
     }
 
-    void OnBecameInvisible() {
-        if (!dead)
+    void CheckOnscreen() {
+        if (!dead && !Camera.main.rect.Contains(Camera.main.WorldToViewportPoint(transform.position)))
             Die();
     }
 
     public void Die() {
+        Debug.Log("Die");
         dead = true;
         Destroy(gameObject);
         PlayerStart ps = (PlayerStart)GameObject.FindObjectOfType(typeof(PlayerStart));

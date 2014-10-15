@@ -20,6 +20,7 @@ public class PlayerStart : MonoBehaviour
     public void GeneratePlayer() {
         if (shuttingDown)
             return;
+            
         Instantiate(Resources.Load("Player", typeof(GameObject)),
                     transform.position - Vector3.forward,
                     Quaternion.identity);
