@@ -31,6 +31,4 @@ public class MainCamera : MonoBehaviour
                   .ToList()
                   .ForEach(player => Destroy(((Player)player).gameObject));
     }
-
-    
 }
