@@ -6,7 +6,7 @@ using System;
 
 public class Player : MonoBehaviour
 {
-    const float speed = 12f;
+    const float speed = 11f;
     const float GRAVITY_SCALE = 80f;
 
     private bool dead = false;

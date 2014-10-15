@@ -14,11 +14,17 @@ public class Goal : MonoBehaviour
 
     void WinLevel(Player player) {
         Destroy(player.gameObject);
-        
+
         int nextLevel = Application.loadedLevel + 1;
         if (nextLevel >= Application.levelCount) {
             nextLevel = 1;
         }
         Application.LoadLevel(nextLevel);
+    }
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            WinLevel((Player)GameObject.FindObjectOfType(typeof(Player)));
+        }
     }
 }

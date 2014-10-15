@@ -6,7 +6,7 @@ using System.Linq;
 public class Patrol : MonoBehaviour
 {
     bool returning = false;
-    float speed = 3f;
+    public float speed = 3f;
     public GameObject destObject;
     Vector3 startPos;
     Vector3 destPos;

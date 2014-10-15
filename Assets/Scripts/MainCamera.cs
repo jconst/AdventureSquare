@@ -29,6 +29,8 @@ public class MainCamera : MonoBehaviour
     void DestroyAllPlayers() {
         GameObject.FindObjectsOfType(typeof(Player))
                   .ToList()
-                  .ForEach(go => Destroy(go));
+                  .ForEach(player => Destroy(((Player)player).gameObject));
     }
+
+    
 }
