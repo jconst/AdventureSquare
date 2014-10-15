@@ -3,19 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class MovingPlatform : MonoBehaviour
+public class Patrol : MonoBehaviour
 {
     bool returning = false;
     float speed = 3f;
-    public GameObject destPlatform;
+    public GameObject destObject;
     Vector3 startPos;
     Vector3 destPos;
     Vector2 heading;
 
     void Start() {
         startPos = transform.position;
-        destPos = destPlatform.transform.position;
-        Destroy(destPlatform);
+        destPos = destObject.transform.position;
+        Destroy(destObject);
     }
 
     void Update() {
