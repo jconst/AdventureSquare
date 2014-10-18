@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     }
 
     void UpdateGravity() {
-        KeyConfig.GravityForKey.Where(kvp => Input.GetKeyDown(kvp.Key))
+        KeyConfig.GravityForKey.Where(kvp => Input.GetKey(kvp.Key))
                                .Select(kvp => kvp.Value)
                                .ToList()
                                .ForEach(vec => gravity = vec);

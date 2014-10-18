@@ -14,7 +14,7 @@ public class Patrol : MonoBehaviour
 
     void Start() {
         startPos = transform.position;
-        destPos = destObject.transform.position;
+        destPos = destObject.renderer.bounds.center;
         Destroy(destObject);
     }
 
@@ -46,7 +46,7 @@ public class Patrol : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D coll) {
         Player player = coll.gameObject.GetComponent<Player>();
-        if (player != null) {
+        if (player != null) {            
             player.transform.Translate(heading * speed * Time.deltaTime);
         }
     }
