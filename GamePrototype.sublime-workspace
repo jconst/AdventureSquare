@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"game",
+				"gameObject"
+			],
+			[
+				"OnCo",
+				"OnCollisionStay	collision"
+			],
+			[
+				"dest",
+				"destPos"
+			],
+			[
+				"dis",
+				"distanceFromDest"
+			],
+			[
+				"distance",
+				"distanceFromStart"
+			],
+			[
+				"Move",
+				"MoveTo"
+			],
+			[
+				"Dist",
+				"DistanceFromDest"
+			],
+			[
+				"Find",
+				"FindObjectOfType	type"
+			],
+			[
+				"OnBec",
+				"OnBecameInvisible	void"
+			],
+			[
+				"coll",
+				"collisions"
+			],
+			[
+				"FindO",
+				"FindObjectOfType	type"
+			],
+			[
+				"OnColl",
+				"OnCollisionEnter	collision"
+			],
+			[
 				"call",
 				"callbackAlert"
 			],
@@ -74,10 +122,6 @@
 			[
 				"gameSt",
 				"gameStartMelody"
-			],
-			[
-				"game",
-				"gameStart"
 			],
 			[
 				"sc",
@@ -156,10 +200,6 @@
 				"oldTurnsSprite"
 			],
 			[
-				"FindO",
-				"FindObjectsOfType	type"
-			],
-			[
 				"Project",
 				"Projectile"
 			],
@@ -182,10 +222,6 @@
 			[
 				"Invent",
 				"InventoryScreen"
-			],
-			[
-				"Find",
-				"FindWithTag	tag"
 			],
 			[
 				"fire",
@@ -226,10 +262,6 @@
 			[
 				"all",
 				"allowedDirections"
-			],
-			[
-				"coll",
-				"CollRect"
 			],
 			[
 				"cur",
@@ -408,10 +440,6 @@
 				"pthread"
 			],
 			[
-				"dis",
-				"diskListLock"
-			],
-			[
 				"disk",
 				"diskListLock"
 			],
@@ -486,34 +514,6 @@
 			[
 				"dirE",
 				"dirEntryIndex"
-			],
-			[
-				"FS_",
-				"FS_BLOCKSIZE"
-			],
-			[
-				"by",
-				"bytesWritten"
-			],
-			[
-				"block",
-				"blockLocs"
-			],
-			[
-				"newBlockLo",
-				"newBlockLocs"
-			],
-			[
-				"len",
-				"length"
-			],
-			[
-				"last",
-				"lastBlockUsed"
-			],
-			[
-				"current",
-				"currentBlockLoc"
 			]
 		]
 	},
@@ -523,7 +523,79 @@
 			"file": "Assets/Scripts/Player.cs",
 			"settings":
 			{
-				"buffer_size": 306,
+				"buffer_size": 2434,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/KeyConfig.cs",
+			"settings":
+			{
+				"buffer_size": 681,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Extensions.cs",
+			"settings":
+			{
+				"buffer_size": 1045,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/PlayerStart.cs",
+			"settings":
+			{
+				"buffer_size": 766,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/GravityArrow.cs",
+			"settings":
+			{
+				"buffer_size": 433,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Goal.cs",
+			"settings":
+			{
+				"buffer_size": 746,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Sound.cs",
+			"settings":
+			{
+				"buffer_size": 2924,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/MainCamera.cs",
+			"settings":
+			{
+				"buffer_size": 766,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Deadly.cs",
+			"settings":
+			{
+				"buffer_size": 323,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Patrol.cs",
+			"settings":
+			{
+				"buffer_size": 1406,
 				"line_ending": "Unix"
 			}
 		}
@@ -584,6 +656,7 @@
 	},
 	"file_history":
 	[
+		"/Users/josephconstan/Code/Unity/GamePrototype/Assets/Scripts/Start.cs",
 		"/Users/josephconstan/Code/Unity/ToolPrototype/Assets/Scripts/Extensions.cs",
 		"/Users/josephconstan/Code/Unity/ToolPrototype/Assets/Scripts/Button1.cs",
 		"/Users/josephconstan/Code/Unity/ToolPrototype/Assets/Scripts/BGMusicButton.cs",
@@ -710,8 +783,7 @@
 		"/Users/josephconstan/Code/482p4/FileLocker.h",
 		"/Users/josephconstan/Code/482p4/Message.h",
 		"/Users/josephconstan/Code/482p4/RAMFile.cpp",
-		"/Users/josephconstan/Code/482p4/FSPath.h",
-		"/Users/josephconstan/Code/482p4/test_multiRead.cpp"
+		"/Users/josephconstan/Code/482p4/FSPath.h"
 	],
 	"find":
 	{
@@ -719,7 +791,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 99.0,
 		"where_history":
 		[
 			"",
@@ -735,6 +807,17 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"WorldToScreenPoint",
+			"pixelRect",
+			"destPlatform",
+			"destPlatform.transform.position",
+			"CheckPos",
+			"Debug.Log",
+			"List",
+			"Vector2",
+			"List",
+			"Length",
+			"AddRange",
 			"06D51899-51C2-40B2-99D3-E59871BBFA36",
 			"Debug",
 			"Reset",
@@ -851,18 +934,7 @@
 			"currentRoo",
 			"Debug.",
 			"random",
-			"mainCam.currentRoom",
-			"mainCam.CurrentRoom()",
-			"mainCam",
-			"OpenDirections",
-			"Debug.Log",
-			"index",
-			"Normalize",
-			"v",
-			"System.Random.NextDouble()",
-			"System.Random.Sample()",
-			"System.Random.value",
-			"UnityEngine.Random"
+			"mainCam.currentRoom"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1016,15 +1088,108 @@
 					"file": "Assets/Scripts/Player.cs",
 					"settings":
 					{
-						"buffer_size": 306,
+						"buffer_size": 2434,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								196,
-								196
+								1507,
+								1507
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1009.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/KeyConfig.cs",
+					"settings":
+					{
+						"buffer_size": 681,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								238,
+								238
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/Extensions.cs",
+					"settings":
+					{
+						"buffer_size": 1045,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								773,
+								415
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 64.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scripts/PlayerStart.cs",
+					"settings":
+					{
+						"buffer_size": 766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								763,
+								763
 							]
 						],
 						"settings":
@@ -1036,6 +1201,182 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/GravityArrow.cs",
+					"settings":
+					{
+						"buffer_size": 433,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								374,
+								374
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scripts/Goal.cs",
+					"settings":
+					{
+						"buffer_size": 746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								681,
+								681
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Assets/Scripts/Sound.cs",
+					"settings":
+					{
+						"buffer_size": 2924,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2661,
+								2661
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1387.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Assets/Scripts/MainCamera.cs",
+					"settings":
+					{
+						"buffer_size": 766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								763,
+								763
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Assets/Scripts/Deadly.cs",
+					"settings":
+					{
+						"buffer_size": 323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								304,
+								304
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "Assets/Scripts/Patrol.cs",
+					"settings":
+					{
+						"buffer_size": 1406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								176
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 400.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
