@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
 
     void Start() {
         Physics2D.gravity = -Vector2.up * GRAVITY_SCALE;
+        Debug.Log("Start");
     }
     
     void Update() {
