@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     }
     
     void Update() {
-        CheckOnscreen();
+        CheckDeath();
         if (TouchingFloor()) {
             UpdateGravity();
             Move();
@@ -67,9 +67,11 @@ public class Player : MonoBehaviour
                          .Any(normal => Vector2.Dot(normal, gravity) < -0.9);
     }
 
-    void CheckOnscreen() {
-        if (!dead && !Camera.main.rect.Contains(Camera.main.WorldToViewportPoint(transform.position)))
+    void CheckDeath() {
+        if (!dead && !Camera.main.rect.Contains(Camera.main.WorldToViewportPoint(transform.position)) ||
+            Input.GetKeyDown(KeyCode.R)) {
             Die();
+        }
     }
 
     public void Die() {
