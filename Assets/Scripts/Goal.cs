@@ -23,7 +23,13 @@ public class Goal : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        int level = Application.loadedLevel;
+        bool firstOrLastLevel = level == 0 || level == Application.levelCount - 1;
+        bool normalContinue = Input.GetKeyDown(KeyCode.Space) && firstOrLastLevel;
+        bool secretCombo = Input.GetKey(KeyCode.J)
+                        && Input.GetKey(KeyCode.O)
+                        && Input.GetKeyDown(KeyCode.E);
+        if (normalContinue || secretCombo) {
             WinLevel((Player)GameObject.FindObjectOfType(typeof(Player)));
         }
     }
