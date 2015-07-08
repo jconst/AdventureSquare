@@ -13,7 +13,7 @@ public class PlayerStart : MonoBehaviour
             Application.LoadLevel(0);
             return;
         }
-        renderer.enabled = false;
+        GetComponent<Renderer>().enabled = false;
         GeneratePlayer();
     }
 

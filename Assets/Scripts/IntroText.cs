@@ -9,7 +9,7 @@ public class IntroText : MonoBehaviour
 
     void Start() {
         if (resetToIntroText) {
-            guiText.text = @"This is a game about gravity!
+            GetComponent<GUIText>().text = @"This is a game about gravity!
 Use WASD to change the gravity of the room.
 Use the arrow keys to move around on the floor.
 (Keep in mind the ""floor"" will change with the gravity.)
@@ -19,6 +19,6 @@ Press Spacebar to begin.
 Good luck!";
         }
 
-        guiText.fontSize = Screen.height / 26;
+        GetComponent<GUIText>().fontSize = Screen.height / 26;
     }
 }

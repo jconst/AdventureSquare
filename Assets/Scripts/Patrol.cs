@@ -5,7 +5,6 @@ using System.Linq;
 
 public class Patrol : MonoBehaviour
 {
-    bool returning = false;
     public float speed = 3f;
     public GameObject destObject;
     Vector3 startPos;
@@ -14,34 +13,34 @@ public class Patrol : MonoBehaviour
 
     void Start() {
         startPos = transform.position;
-        destPos = destObject.renderer.bounds.center;
+        destPos = destObject.GetComponent<Renderer>().bounds.center;
+        SetSailFor(destPos);
         Destroy(destObject);
     }
 
     void Update() {
-        UpdateState();
-        if (returning) {
-            MoveTo(startPos);
-        } else {
-            MoveTo(destPos);
-        }
+        UpdateHeading();
+        Move();
     }
 
-    void UpdateState() {
+    void UpdateHeading() {
         float distanceFromStart = (transform.position - startPos).magnitude;
         float distanceFromDest = (destPos - transform.position).magnitude;
         float maxDistance = (destPos - startPos).magnitude;
 
         if (distanceFromStart > maxDistance) {
-            returning = true;
+            SetSailFor(startPos);
         } else if (distanceFromDest > maxDistance) {
-            returning = false;
+            SetSailFor(destPos);
         }
     }
 
-    void MoveTo(Vector3 dest) {
-        heading = (dest - transform.position).normalized;
+    void Move() {
         transform.Translate(heading * speed * Time.deltaTime);
+    }
+
+    void SetSailFor(Vector3 dest) {
+        heading = (dest - transform.position).normalized;
     }
 
     void OnCollisionStay2D(Collision2D coll) {
