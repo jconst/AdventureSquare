@@ -20,7 +20,6 @@ public class Patrol : MonoBehaviour
 
     void Update() {
         UpdateHeading();
-        Move();
     }
 
     void UpdateHeading() {
@@ -35,18 +34,8 @@ public class Patrol : MonoBehaviour
         }
     }
 
-    void Move() {
-        transform.Translate(heading * speed * Time.deltaTime);
-    }
-
     void SetSailFor(Vector3 dest) {
         heading = (dest - transform.position).normalized;
-    }
-
-    void OnCollisionStay2D(Collision2D coll) {
-        Player player = coll.gameObject.GetComponent<Player>();
-        if (player != null) {            
-            player.transform.Translate(heading * speed * Time.deltaTime);
-        }
+        GetComponent<Rigidbody2D>().velocity = heading * speed;
     }
 }

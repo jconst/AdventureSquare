@@ -6,8 +6,8 @@ using System;
 
 public class Player : MonoBehaviour
 {
-    const float speed = 11f;
-    const float GRAVITY_SCALE = 80f;
+    const float speed = 12f;
+    const float GRAVITY_SCALE = 320f;
 
     private bool dead = false;
     private HashSet<Collision2D> collisions =
@@ -75,8 +75,9 @@ public class Player : MonoBehaviour
     }
 
     public void Die() {
-        Debug.Log("Die");
         dead = true;
+        var deathText = GameObject.Find("DeathText").GetComponent<DeathText>();
+        deathText.deaths++;
         Destroy(gameObject);
         PlayerStart ps = (PlayerStart)GameObject.FindObjectOfType(typeof(PlayerStart));
         ps.GeneratePlayer();

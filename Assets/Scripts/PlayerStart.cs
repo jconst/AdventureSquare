@@ -23,7 +23,6 @@ public class PlayerStart : MonoBehaviour
         Instantiate(Resources.Load("Player", typeof(GameObject)),
                     transform.position - Vector3.forward,
                     Quaternion.identity);
-        Debug.Log("Here");
     }
 
     void OnApplicationQuit() {
