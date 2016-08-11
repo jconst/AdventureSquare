@@ -5,12 +5,14 @@ using System.Linq;
 
 public class MainCamera : MonoBehaviour
 {
+    public Sound bgSound;
+
     void Awake() {
         DontDestroyOnLoad(gameObject);
     }
 
     void Start() {
-        AudioManager.Main.PlayNewSound("Background", loop: true);
+        bgSound = AudioManager.Main.PlayNewSound("Background", loop: true);
     }
 
     void OnApplicationQuit() {

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class LevelText : MonoBehaviour
 {
     void Start () {
-        DontDestroyOnLoad(gameObject);
         var canvas = GetComponent<Graphic>().canvas;
         DontDestroyOnLoad(canvas);
     }
